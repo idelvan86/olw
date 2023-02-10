@@ -26,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_email_index');
+        Schema::table('users',function(Blueprint $table){
+            $table->dropIndex('user_email_index');
+     });
     }
 };
