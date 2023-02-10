@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('address_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
+            $table->softDeletes();
 
             //setando direto a chave estrangeira
             //$table->integer('user_id');
