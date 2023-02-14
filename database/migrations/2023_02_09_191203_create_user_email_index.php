@@ -15,7 +15,7 @@ return new class extends Migration
     public function up()
     {
 //executa comandos sql na mão mesmo
-        DB::unprepared("CREATE UNIQUE INDEX user_email_index on users(email) WHERE deleted_at IS NULL");
+        DB::unprepared("CREATE UNIQUE INDEX user_email_index on users(email) ");
 
     }
 
